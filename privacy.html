@@ -97,10 +97,10 @@
 
       <h2>OpenSubtitles</h2>
       <p>
-        When you use Find Subtitles Online, SubLoader communicates with the OpenSubtitles API to perform subtitle searches, authentication, and subtitle downloads. Search-related information may include the video title, year, season, episode, language, and other search preferences selected by you.
+        When you use Find Subtitles Online, the SubLoader extension sends the OpenSubtitles request to SubLoader's server, which relays the request to the OpenSubtitles API. This keeps SubLoader's publisher API key out of the browser extension. Search-related information may include the video title, year, season, episode, language, and other search preferences selected by you.
       </p>
       <p>
-        If you sign in to OpenSubtitles through SubLoader, your OpenSubtitles credentials are transmitted to OpenSubtitles for authentication. SubLoader does not save your OpenSubtitles password. After successful authentication, an OpenSubtitles authentication token may be stored locally and used for authenticated requests.
+        If you sign in to OpenSubtitles through SubLoader, your OpenSubtitles username and password are sent through SubLoader's server solely to relay the login request to OpenSubtitles for authentication. SubLoader does not store your OpenSubtitles password. After successful authentication, the OpenSubtitles authentication token returned to the extension may be stored locally in Chrome and sent through SubLoader's server when relaying authenticated OpenSubtitles requests.
       </p>
 
       <h2>Stripe and Premium subscriptions</h2>
