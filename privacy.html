@@ -16,201 +16,143 @@
       --accent: #20b9f2;
       --border: rgba(255,255,255,.10);
     }
-
     * { box-sizing: border-box; }
-
     body {
       margin: 0;
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
-                   "Segoe UI", sans-serif;
-      background:
-        radial-gradient(circle at top right, rgba(32,185,242,.12), transparent 32rem),
-        var(--bg);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top right, rgba(32,185,242,.12), transparent 32rem), var(--bg);
       color: var(--text);
       line-height: 1.65;
     }
-
-    .wrap {
-      width: min(860px, calc(100% - 40px));
-      margin: 0 auto;
-      padding: 56px 0 72px;
-    }
-
-    .brand {
-      display: inline-flex;
-      align-items: center;
-      gap: 12px;
-      margin-bottom: 28px;
-      font-weight: 800;
-      font-size: 1.15rem;
-      letter-spacing: .2px;
-    }
-
-    .mark {
-      width: 42px;
-      height: 42px;
-      border-radius: 10px;
-      display: grid;
-      place-items: center;
-      background: linear-gradient(145deg, #179fe0, #1f75ff);
-      box-shadow: 0 10px 30px rgba(20,132,255,.28);
-      font-weight: 900;
-      color: white;
-    }
-
-    .card {
-      background: linear-gradient(180deg, rgba(17,31,54,.96), rgba(13,23,41,.96));
-      border: 1px solid var(--border);
-      border-radius: 18px;
-      padding: 34px;
-      box-shadow: 0 22px 70px rgba(0,0,0,.28);
-    }
-
-    h1 {
-      margin: 0 0 10px;
-      font-size: clamp(2rem, 5vw, 3rem);
-      line-height: 1.1;
-      letter-spacing: -.03em;
-    }
-
-    .updated {
-      color: var(--muted);
-      margin: 0 0 30px;
-    }
-
-    h2 {
-      margin: 34px 0 10px;
-      font-size: 1.2rem;
-    }
-
+    .wrap { width: min(860px, calc(100% - 40px)); margin: 0 auto; padding: 56px 0 72px; }
+    .brand { display: inline-flex; align-items: center; gap: 12px; margin-bottom: 28px; font-weight: 800; font-size: 1.15rem; letter-spacing: .2px; }
+    .mark { width: 42px; height: 42px; border-radius: 10px; display: grid; place-items: center; background: linear-gradient(145deg, #179fe0, #1f75ff); box-shadow: 0 10px 30px rgba(20,132,255,.28); font-weight: 900; color: white; }
+    .nav { margin-left: auto; display: flex; gap: 16px; font-size: .92rem; font-weight: 650; }
+    .topbar { display: flex; align-items: center; gap: 18px; }
+    .card { background: linear-gradient(180deg, rgba(17,31,54,.96), rgba(13,23,41,.96)); border: 1px solid var(--border); border-radius: 18px; padding: 34px; box-shadow: 0 22px 70px rgba(0,0,0,.28); }
+    h1 { margin: 0 0 10px; font-size: clamp(2rem, 5vw, 3rem); line-height: 1.1; letter-spacing: -.03em; }
+    .updated { color: var(--muted); margin: 0 0 30px; }
+    h2 { margin: 34px 0 10px; font-size: 1.2rem; }
     p, li { color: #dbe3ef; }
-
-    ul {
-      padding-left: 22px;
-      margin: 10px 0 0;
-    }
-
-    a {
-      color: var(--accent);
-      text-decoration: none;
-    }
-
+    ul { padding-left: 22px; margin: 10px 0 0; }
+    a { color: var(--accent); text-decoration: none; }
     a:hover { text-decoration: underline; }
-
-    .summary {
-      padding: 18px 20px;
-      border-left: 4px solid var(--accent);
-      background: rgba(32,185,242,.07);
-      border-radius: 10px;
-      margin: 24px 0 6px;
-    }
-
-    .footer {
-      margin-top: 28px;
-      color: var(--muted);
-      font-size: .92rem;
-      text-align: center;
-    }
-
+    .summary { padding: 18px 20px; border-left: 4px solid var(--accent); background: rgba(32,185,242,.07); border-radius: 10px; margin: 24px 0 6px; }
+    .footer { margin-top: 28px; color: var(--muted); font-size: .92rem; text-align: center; }
     @media (max-width: 600px) {
       .wrap { width: min(100% - 24px, 860px); padding-top: 28px; }
       .card { padding: 24px; border-radius: 14px; }
+      .topbar { align-items: flex-start; }
+      .nav { margin-left: 0; }
     }
   </style>
 </head>
 <body>
   <main class="wrap">
-    <div class="brand">
-      <div class="mark">SL</div>
-      <span>SubLoader</span>
+    <div class="topbar">
+      <div class="brand"><div class="mark">SL</div><span>SubLoader</span></div>
+      <nav class="nav" aria-label="Legal"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></nav>
     </div>
 
     <article class="card">
       <h1>Privacy Policy</h1>
-      <p class="updated">Last updated: October 2, 2026</p>
+      <p class="updated">Last updated: October 9, 2026</p>
 
       <div class="summary">
-        SubLoader processes local subtitle files directly in the browser.
-        Online subtitle features communicate with OpenSubtitles when requested by the user.
+        SubLoader processes local subtitle files in the browser. General use of SubLoader does not require a SubLoader account. A Free or Premium account is required for Netflix and Prime Video subtitle downloads. Payment card details are handled by Stripe and are not stored by SubLoader.
       </div>
 
       <h2>Information SubLoader handles</h2>
+      <p>Depending on which features you use, SubLoader may handle:</p>
+      <ul>
+        <li>Local subtitle files that you select in the browser.</li>
+        <li>Subtitle search information such as title, year, season, episode, language, and related search preferences.</li>
+        <li>SubLoader account information such as email address, account plan, account status, authentication state, extension version, and last-seen time.</li>
+        <li>Netflix and Prime Video monthly download usage for Free accounts.</li>
+        <li>Limited subscription metadata provided by Stripe, such as Stripe customer and subscription identifiers, subscription status, selected price, current billing-period end, and scheduled cancellation information.</li>
+      </ul>
+
+      <h2>SubLoader accounts</h2>
       <p>
-        SubLoader does not independently collect personal information for advertising,
-        analytics, or behavioral profiling. When a user chooses to sign in to OpenSubtitles,
-        login credentials are transmitted to OpenSubtitles for authentication.
-        SubLoader does not save the user's OpenSubtitles password.
+        A SubLoader account is not required for general extension use. A Free or Premium account is required for Netflix and Prime Video subtitle downloads. When you create a SubLoader account, your email address and a securely hashed representation of your password are stored on SubLoader's server. SubLoader does not store your password in plain text.
+      </p>
+      <p>
+        After sign-in, an authentication token may be stored in Chrome extension storage so that you can remain signed in. The server may also store account activity needed to operate the service, such as plan status, download quota usage, extension version, and last-seen time.
       </p>
 
       <h2>Subtitle files</h2>
       <p>
-        Local subtitle files selected by the user are processed within Chrome.
-        They are used by SubLoader to display subtitles over supported videos.
+        Local subtitle files selected by the user are processed within Chrome and are used to display subtitles over supported videos. SubLoader does not upload local subtitle files to the SubLoader account server as part of normal local-file use.
       </p>
 
-      <h2>Local storage</h2>
+      <h2>Local browser storage</h2>
       <p>
-        SubLoader may store extension settings, subtitle preferences, authentication tokens,
-        and subtitle-related state locally in the browser using Chrome's extension storage.
-        Some subtitle information may be associated with individual videos during use of the
-        extension.
+        SubLoader may store extension settings, subtitle preferences, authentication tokens, subtitle-related state, cached video metadata, and similar extension data using Chrome's extension storage. Some subtitle information may be associated with individual videos during use of the extension.
       </p>
 
-      <h2>Website access</h2>
+      <h2>Netflix and Prime Video download quota</h2>
       <p>
-        SubLoader accesses supported YouTube, Dailymotion, Prime Video, and Netflix pages
-        only as needed to identify the current video and provide subtitle-related functionality,
-        including displaying, synchronizing, customizing, and controlling subtitles.
+        Free SubLoader accounts have a server-managed monthly limit for Netflix and Prime Video subtitle downloads. To enforce this limit across reinstalls and signed-in sessions, SubLoader records the account's monthly download count on the SubLoader server. Premium accounts may receive different or unlimited download allowances as shown in the extension.
       </p>
 
       <h2>OpenSubtitles</h2>
       <p>
-        When the user uses Find Subtitles Online, SubLoader communicates with the OpenSubtitles
-        API to perform subtitle searches, authentication, and subtitle downloads. Search-related
-        information may include the video title, year, season, episode, language, and other
-        search preferences selected by the user.
+        When you use Find Subtitles Online, SubLoader communicates with the OpenSubtitles API to perform subtitle searches, authentication, and subtitle downloads. Search-related information may include the video title, year, season, episode, language, and other search preferences selected by you.
+      </p>
+      <p>
+        If you sign in to OpenSubtitles through SubLoader, your OpenSubtitles credentials are transmitted to OpenSubtitles for authentication. SubLoader does not save your OpenSubtitles password. After successful authentication, an OpenSubtitles authentication token may be stored locally and used for authenticated requests.
       </p>
 
-      <h2>Authentication</h2>
+      <h2>Stripe and Premium subscriptions</h2>
       <p>
-        Users may optionally sign in to an OpenSubtitles account through SubLoader.
-        Login credentials are sent to OpenSubtitles for authentication. SubLoader does not save
-        the user's OpenSubtitles password. After successful authentication, an authentication
-        token may be stored locally and used for authenticated OpenSubtitles requests.
+        SubLoader uses Stripe to process Premium subscription payments. Payment card numbers, card security codes, and other payment credentials entered on Stripe Checkout are handled by Stripe and are not stored by SubLoader.
+      </p>
+      <p>
+        SubLoader may receive and store limited billing metadata from Stripe that is necessary to provide Premium access and display subscription information, including customer and subscription identifiers, subscription status, selected price, renewal-period end, and scheduled cancellation information. Stripe may also process information under its own privacy policy.
+      </p>
+
+      <h2>Website and streaming-site access</h2>
+      <p>
+        SubLoader accesses supported YouTube, Dailymotion, Prime Video, and Netflix pages only as needed to identify the current video and provide subtitle-related functionality, including displaying, synchronizing, customizing, capturing, loading, or downloading subtitles where supported.
+      </p>
+
+      <h2>Service and security logs</h2>
+      <p>
+        SubLoader's hosting and server infrastructure may generate standard technical logs needed for security, reliability, troubleshooting, and abuse prevention. These logs can include information commonly produced by web servers, such as request time, requested endpoint, IP address, user agent, response status, and error information.
       </p>
 
       <h2>Analytics and advertising</h2>
       <p>
-        SubLoader does not use advertising trackers, behavioral profiling, or analytics services.
+        SubLoader does not use advertising trackers or behavioral profiling to target ads. If analytics or additional telemetry are introduced in the future, this policy will be updated to describe those practices.
       </p>
 
       <h2>Data sharing and sale</h2>
       <p>
-        SubLoader does not sell or rent user data. Information is transmitted to OpenSubtitles
-        only when necessary to provide online subtitle features requested by the user.
+        SubLoader does not sell or rent personal information. Information is shared with service providers only as needed to provide requested features, operate accounts and subscriptions, process payments, host the service, or maintain security and reliability. These providers may include OpenSubtitles, Stripe, hosting providers, and infrastructure used by SubLoader.
+      </p>
+
+      <h2>Data retention</h2>
+      <p>
+        Account, quota, subscription, and security-related information may be retained for as long as reasonably necessary to operate SubLoader, maintain account and billing records, prevent abuse, resolve disputes, satisfy legal obligations, and protect the service. Local extension data can generally be removed by signing out, clearing extension data, or uninstalling the extension, although server-side account and billing records are separate from browser storage.
       </p>
 
       <h2>Third-party services</h2>
       <p>
-        OpenSubtitles is an independent third-party service. Use of OpenSubtitles is subject to
-        its own terms, privacy practices, account requirements, and usage limits.
+        OpenSubtitles, Stripe, Netflix, Prime Video, YouTube, Dailymotion, and other third-party services are independent from SubLoader. Their services are governed by their own terms, privacy practices, account requirements, and usage limits.
       </p>
 
       <h2>Changes to this policy</h2>
       <p>
-        If SubLoader's data practices change in the future, this Privacy Policy
-        will be updated to reflect those changes before any new data collection
-        practices are introduced.
+        This Privacy Policy may be updated as SubLoader changes. Material changes to data practices will be reflected in an updated policy and effective date.
       </p>
 
       <h2>Contact</h2>
       <p>
-        For questions about this Privacy Policy or SubLoader, please use the
-        official support or project page associated with the extension.
+        For privacy questions or requests related to SubLoader, contact <a href="mailto:subloader.app@gmail.com">subloader.app@gmail.com</a>.
       </p>
     </article>
 
-    <div class="footer">SubLoader Privacy Policy</div>
+    <div class="footer">SubLoader Privacy Policy · <a href="terms.html">Terms of Service</a></div>
   </main>
 </body>
 </html>
